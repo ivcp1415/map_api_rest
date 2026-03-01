@@ -1,0 +1,4 @@
+pais;codi;ciutat;tipus;nom;direccio;latitud;longitud;horaris;preu;descripcio;puntuacio;edat;moneda
+Espanya;ESP;Barcelona;Atraccio;Torre Glòries;Avinguda Diagonal, 211;41.4031;2.1897;10:00-19:00;15.0;Torre icònica de Barcelona amb vistes panoràmiques de la ciutat.;4.4;18;€
+Espanya;ESP;Barcelona;Espai;Parc de Montjuïc;Avinguda de l'Estadi, 60;41.3636;2.1667;24/7;0.0;Parc urbà amb jardins, Museus i vistes espectaculars de Barcelona.;4.5;18;€
+Espanya;ESP;Barcelona;Museu;CosmoCaixa;Carrer d'Isaac Newton, 26;41.4117;2.1306;10:00-20:00;6.0;Museu de la ciència amb exposicions interactives per a totes les edats.;4.6;18;€

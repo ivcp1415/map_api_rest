@@ -1,0 +1,207 @@
+ html{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* CONTENIDOR PRINCIPAL DE L'APP */
+ .container{
+    display: flex;
+    height: 97vh;
+    gap:10px;
+ }
+
+
+/* ESTILS DEL CONTENIDOR DEL MAPA */
+ .container-map {
+    width: 65%;
+    border-radius: 10px;
+    border: 1px solid rgb(96, 105, 105);
+ }
+
+
+/* ESTILS DEL CONTENIDOR DE LA LLISTA DE PUNTS D'INTERÈS */
+.container-llista{
+   width: 35%;
+   background-color: rgb(192, 195, 195);
+   border-radius: 10px;
+   padding:10px;
+ }
+
+
+ /* informació del pais i la ciutat */
+ .title{
+   margin: 4px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+
+ /* filtres de búsqueda */
+ .filter-form {
+   margin-bottom: 10px;
+   padding: 10px;
+   background-color: #efbcbc;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-row {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   margin: 3px;
+}
+
+
+.form-group {
+   width: 48%;
+}
+
+
+.form-group-input {
+   width: 95%;
+}
+
+
+select, input[type="text"] {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+}
+
+
+button {
+   padding: 5px;
+   background-color: #f8746b;
+   color: #ffffff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+}
+
+
+button:hover {
+   background-color: #ff0000;
+}
+
+
+/* seccio llista de punts interes */
+ .container-punt-interes{
+    border: 1px solid black;
+    height: 50%;
+    overflow: auto;
+    padding: 5px;
+    background-color: #f3dfdf;
+    margin: 5px;
+ }
+
+
+.interest-item {
+   display: flex;
+   justify-content: space-between;
+   align-content: center;
+   padding: 5px;
+   border: 1px solid #f56c6c;
+   border-radius: 10px;
+   margin-bottom: 5px;
+}
+
+
+.espai{
+   background-color: aquamarine;
+}
+
+
+.atraccio{
+   background-color: rgb(225, 255, 127);
+}
+.museu{
+   background-color: rgb(255, 211, 127);
+}
+
+
+/* organització de la informació dins de cada item */
+.item-info {
+   flex: 1;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+
+.item-name {
+   margin: 0;
+   color: #333;
+   font-size: 1.2em;
+}
+
+
+.item-address, .item-type, .item-rating {
+   margin: 5px 0;
+   color: #555;
+   font-size: 0.9em; 
+}
+
+
+.item-rating {
+   font-weight: bold;
+   color: #e67e22;
+}
+
+
+.delete-btn {
+   background-color: #e74c3c;
+   color: #fff;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+
+.delete-btn:hover {
+   background-color: #c0392b;
+}
+
+
+/* container informació totals */
+ .container-num-total{
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+
+ /* zona drag files */
+ .container-load-file{
+    height: 10%;
+ }
+
+
+ .dropZone {
+    border: 2px dashed #000;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+
+  .dropZone:hover {
+   border: 2px dashed #2e2bde;
+   color: #2e2bde;
+ }
+
+
+ .dragover {
+   border: 2px dashed #de2bb1;
+   color: #de2bb1;
+   text-decoration: dotted;
+ }
