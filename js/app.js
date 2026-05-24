@@ -14,6 +14,7 @@ const dropZone = document.querySelector(".dropZone");
 const interestClass = new LlistaPuntsInteres();
 const map = new Mapa();
 let interestList = [];
+// maybe do it statically
 const csvReader = new CSVReader();
 const deleteAllBtn = document.querySelector(".clear-list");
 const listDiv = document.querySelector(".container-punt-interes");
@@ -21,7 +22,6 @@ const counter = document.querySelector(".numTotal");
 const typeFilterSelect = document.getElementById("typeFilter");
 const nameFilter = document.getElementById("nameFilter");
 const orderFilter = document.getElementById("sortOrder");
-
 
 console.log("init")
 // promise, await 
@@ -97,6 +97,35 @@ const loadAPI = async (code, lat, long) => {
     }
 
 }
+
+const pokeApi = async (id) => {
+        try {
+            if(!id) {
+                console.log("No id found")
+            }
+
+            url = `https://pokeapi.co/api/v2/pokemon/2`
+            // fetch result
+            const result = await fetch(url);
+
+            if (!result.ok) {
+                // return error
+                throw new Error("Error fetching url");
+            }
+
+            const data = await result.json();
+            console.log("pokemon", data);
+
+            return data.name;
+        } catch (error) {
+            // throw error 
+            throw Error(error);
+        }
+}
+
+const pokemon = await pokeApi(2);
+console.log(pokemon);
+
 
 const loadPoints = (points) => {
     // get div
@@ -190,6 +219,11 @@ deleteAllBtn.addEventListener("click", () =>{
     // update number of elements
     counter.textContent = `Número total: ${interestList.length}`;
 });
+
+
+function applyFilters() {
+    
+}
 
 typeFilterSelect.addEventListener("change", ()=>{
     interestClass.filterByType(interestList, loadPoints, displayPoints);

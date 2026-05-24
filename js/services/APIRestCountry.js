@@ -1,3 +1,5 @@
+import { URLS } from "../utils/consts.js";
+
 export class APIRestCountry {
 
     constructor() {
@@ -10,7 +12,7 @@ export class APIRestCountry {
                 return { status: "False", msg: "No code provided"};
             }
 
-            const url =`https://restcountries.com/v3.1/alpha/${code}`;
+            const url = `${URLS.COUNTRIES}${code}`;
             // fetch result
             const result = await fetch(url);
 
@@ -24,8 +26,8 @@ export class APIRestCountry {
 
             return data[0].flags.png;
         } catch (error) {
-            // throw error 
-            throw Error(e);
+            // throw error
+            throw Error(error);
         }
     }
 }

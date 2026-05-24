@@ -3,6 +3,11 @@ export const IVA = {
     GB: 0.20
 }
 
+export const URLS = {
+    COUNTRIES: 'https://restcountries.com/v3.1/alpha/',
+    WEATHER: 'https://api.open-meteo.com/v1/forecast'
+}
+
 export const LATITUDE = 41.408108;
 export const LONGITUDE = 2.170550;
 

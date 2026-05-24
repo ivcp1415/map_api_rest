@@ -1,3 +1,5 @@
+import { URLS } from "../utils/consts.js";
+
 export class APIRestWeather {
 
     constructor() {
@@ -10,7 +12,7 @@ export class APIRestWeather {
                 return { status: "False", msg: "No coordinates provided"};
             }
 
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
+            const url = `${URLS.WEATHER}?latitude=${latitude}&longitude=${longitude}&current_weather=true`
             // fetch result
             const result = await fetch(url);
 
