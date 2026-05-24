@@ -71,9 +71,9 @@ export class Components {
         const delBtn = this.createDeleteButton(point);
 
         // set information
+        const publicText = point.esApteTotPublic() ? "Per a tots els públics" : `Majors de ${point.edatMinima}`;
         title.textContent = point.nom;
-        p.textContent = `Tipus: ${point.tipus} | Horaris: ${point.getHoraris()} | Preu: ${point.getPreu()}${point.getMoneda()} (No IVA) |
-                        Majors de ${point.edatMinima}`;
+        p.textContent = `Tipus: ${point.tipus} | Horaris: ${point.getHoraris()} | Preu: ${point.preuIva()} | ${publicText}`;
 
         // append
         infoDiv.appendChild(title);
@@ -107,7 +107,7 @@ export class Components {
         console.log(desc);
 
         title.textContent = point.nom;
-        p.textContent = `${point.ciutat} | Tipus: ${point.tipus} | Horaris: ${point.getHoraris()} | Preu: ${point.getPreu()}${point.getMoneda()} (No IVA)`;
+        p.textContent = `${point.ciutat} | Tipus: ${point.tipus} | Horaris: ${point.getHoraris()} | Preu: ${point.preuIva()}`;
         desc.textContent = `Descripció: ${point.getDescripcio()}`;
 
         // Append text TO THE INFO DIV
@@ -166,7 +166,7 @@ export class Components {
 
         // 4. Iterate over the Set and create an <option> for each unique type
         set.forEach(tipus => {
-            // Avoid duplicating "Tots" if you happened to add it to the Set earlier
+            // Avoid duplicating "Tots" 
             if (tipus !== "Tots") {
                 const opcio = document.createElement("option");
                 opcio.value = tipus;
@@ -181,7 +181,7 @@ export class Components {
 
         const imgFlag = document.createElement("img");
         imgFlag.src = flag;
-        imgFlag.style.width = "30px"; // Just a bit of styling so it fits
+        imgFlag.classList.add("flag-img");
             
         spanPais.innerHTML = ""; // Clear just in case
         spanPais.appendChild(imgFlag);

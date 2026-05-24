@@ -28,6 +28,11 @@
  }
 
 
+ /* bandera del pais */
+.flag-img {
+   width: 30px;
+}
+
  /* informació del pais i la ciutat */
  .title{
    margin: 4px;
